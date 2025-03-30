@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Hussein Nasser Courses List with Coupons</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 1rem;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+    }
+    .courses-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      max-width: 900px;
+      width: 100%;
+    }
+    @media (min-width: 600px) {
+      .courses-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .course {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      text-align: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .course img {
+      width: auto;
+      max-width: 300px;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .course a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .arrow {
+      text-align: center;
+      margin: 1rem 0;
+      font-size: 2rem;
+    }
+    .rating-box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border: 1px solid #d1d7dc;
+      border-radius: 8px;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+    .rating-box .rating,
+    .rating-box .learners {
+      padding: 1rem;
+      text-align: center;
+    }
+    .rating-box .rating {
+      border-right: 1px solid #e6e6e6;
+    }
+    .rating-box .rating-score {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+    .rating-box .stars {
+      color: #f4c150;
+      font-size: 0.9rem;
+    }
+    .rating-box .rating a {
+      font-size: 0.8rem;
+      color: #2d2f31;
+      text-decoration: underline;
+    }
+    .rating-box .learners .count {
+      font-weight: bold;
+    }
+    .rating-box .learners .label {
+      font-size: 0.8rem;
+      color: #6a6f73;
+    }
+  </style>
+</head>
+<body>
+  <div class="courses-grid">
+    <div class="course" id="database">
+      <a href="https://databases.win" target="_blank">
+        <img src="db.png" alt="Fundamentals of Database Engineering">
+        <br>Fundamentals of Database Engineering
+      </a>
+      <div class="rating-box">
+        <div class="rating">
+          <div class="rating-score">4.7</div>
+          <div class="stars">★★★★★</div>
+          <a href="#">9,978 ratings</a>
+        </div>
+        <div class="learners">
+          <div class="count">102,316</div>
+          <div class="label">learners</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="course" id="os">
+      <a href="https://oscourse.win" target="_blank">
+        <img src="os.png" alt="Fundamentals of Operating Systems">
+        <br>Fundamentals of Operating Systems
+      </a>
+      <div class="rating-box">
+        <div class="rating">
+          <div class="rating-score">4.7</div>
+          <div class="stars">★★★★★</div>
+          <a href="#">1,522 ratings</a>
+        </div>
+        <div class="learners">
+          <div class="count">14,959</div>
+          <div class="label">learners</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="course" id="network">
+      <a href="https://network.husseinnasser.com" target="_blank">
+        <img src="net.png" alt="Fundamentals of Network Engineering">
+        <br>Fundamentals of Network Engineering
+      </a>
+      <div class="rating-box">
+        <div class="rating">
+          <div class="rating-score">4.6</div>
+          <div class="stars">★★★★★</div>
+          <a href="#">5,004 ratings</a>
+        </div>
+        <div class="learners">
+          <div class="count">41,169</div>
+          <div class="label">learners</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="course" id="backend">
+      <a href="https://backend.win" target="_blank">
+        <img src="back.png" alt="Fundamentals of Backend Engineering">
+        <br>Fundamentals of Backend Engineering
+      </a>
+      <div class="rating-box">
+        <div class="rating">
+          <div class="rating-score">4.7</div>
+          <div class="stars">★★★★★</div>
+          <a href="#">5,447 ratings</a>
+        </div>
+        <div class="learners">
+          <div class="count">44,664</div>
+          <div class="label">learners</div>
+        </div>
+      </div>
+      <p><small>Recommended Prerequisites: <a href="#network">Fundamentals of Network Engineering</a> + <a href="#os">Fundamentals of Operating Systems</a></small></p>
+
+    </div>
+
+    <div class="course" id="troubleshooting">
+      <a href="https://performance.husseinnasser.com" target="_blank">
+        <img src="perf.png" alt="Troubleshooting Backend Applications">
+        <br>Troubleshooting Backend Applications
+      </a>
+      <div class="rating-box">
+        <div class="rating">
+          <div class="rating-score">4.9</div>
+          <div class="stars">★★★★★</div>
+          <a href="#">563 ratings</a>
+        </div>
+        <div class="learners">
+          <div class="count">11,117</div>
+          <div class="label">learners</div>
+        </div>
+      </div>
+      <p><small>Recommended Prerequisites: <a href="#backend">Backend Engineering</a></small></p>
+
+    </div>
+
+    <div class="course" id="nginx">
+      <a href="https://nginx.husseinnasser.com" target="_blank">
+        <img src="nginx.png" alt="Introduction to NGINX">
+        <br>Introduction to NGINX
+      </a>
+      <div class="rating-box">
+        <div class="rating">
+          <div class="rating-score">4.7</div>
+          <div class="stars">★★★★★</div>
+          <a href="#">1,905 ratings</a>
+        </div>
+        <div class="learners">
+          <div class="count">24,266</div>
+          <div class="label">learners</div>
+        </div>
+      </div>
+      <p><small>Recommended Prerequisites: <a href="#backend">Backend Engineering</a></small></p>
+
+    </div>
+
+    <div class="course" id="node">
+      <a href="https://node.win" target="_blank">
+        <img src="node.png" alt="NodeJS Internals and Architecture">
+        <br>NodeJS Internals and Architecture
+      </a>
+      <div class="rating-box">
+        <div class="rating">
+          <div class="rating-score">4.8</div>
+          <div class="stars">★★★★★</div>
+          <a href="#">157 ratings</a>
+        </div>
+        <div class="learners">
+          <div class="count">2,476</div>
+          <div class="label">learners</div>
+        </div>
+      </div>
+      <p><small>Recommended Prerequisites: <a href="#os">Operating Systems</a></small></p>
+
+    </div>
+
+    <div class="course" id="python">
+      <a href="https://python.husseinnasser.com" target="_blank">
+        <img src="py.png" alt="Python on the Backend">
+        <br>Python on the Backend
+      </a>
+      <div class="rating-box">
+        <div class="rating">
+          <div class="rating-score">4.7</div>
+          <div class="stars">★★★★★</div>
+          <a href="#">1,080 ratings </a>
+        </div>
+        <div class="learners">
+          <div class="count">31,712</div>
+          <div class="label">learners</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
