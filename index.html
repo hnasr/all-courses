@@ -158,7 +158,7 @@
             <span class="coupon-text">with Coupon</span>
 
           </button>
-          <span class ='coupon-text-sub' id = '2722880'>DB-JUN2025-L</span>
+          <span class ='coupon-text-sub' id = '2722880'>DB-COUP-L</span>
 
         </form>
         </div>
@@ -187,7 +187,7 @@
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-          <span class ='coupon-text-sub' id = '5666148'>OS-JUN2025-L</span>
+          <span class ='coupon-text-sub' id = '5666148'>OS-COUP-L</span>
 
         </form>
         </div>
@@ -215,7 +215,7 @@
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-          <span class ='coupon-text-sub' id = '4574556'>NET-JUN2025-L</span>
+          <span class ='coupon-text-sub' id = '4574556'>NET-COUP-L</span>
 
         </form>
         </div>
@@ -244,7 +244,7 @@
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-         <span class ='coupon-text-sub' id = '4953660'>BACK-JUN2025-L</span>
+         <span class ='coupon-text-sub' id = '4953660'>BACK-COUP-L</span>
 
         </form>
 
@@ -278,7 +278,7 @@
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-             <span class ='coupon-text-sub' id = '5180026'>PF-JUN2025-L</span>
+             <span class ='coupon-text-sub' id = '5180026'>PF-COUP-L</span>
 
         </form>
         </div>
@@ -308,7 +308,7 @@
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-         <span class ='coupon-text-sub' id = '2773328'>NGINX-JUN2025-L</span>
+         <span class ='coupon-text-sub' id = '2773328'>NGINX-COUP-L</span>
 
 
         </form>
@@ -339,7 +339,7 @@
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-          <span class ='coupon-text-sub' id = '6244687'>ND-JUN2025-L</span>
+          <span class ='coupon-text-sub' id = '6244687'>ND-COUP-L</span>
 
 
         </form>
@@ -370,12 +370,32 @@
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-          <span class ='coupon-text-sub' id = '2034070'>PY-JUN2025-L</span>
+          <span class ='coupon-text-sub' id = '2034070'>PY-COUP-L</span>
 
         </form>
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+
+  fetch('/coupons.txt')
+  .then(res => res.text())
+  .then(text => {
+    const [headerLine, ...lines] = text.trim().split('\n');
+    const headers = headerLine.replace(/"/g, '').split(',');
+    const json = lines.map(line => Object.fromEntries(
+      line.split(',').map((val, i) => [headers[i], val])
+    ));
+
+    json.forEach(c => {
+      document.getElementById(c.course_id).innerHTML = c.coupon_code
+    })
+    //console.log(json);
+  })
+  .catch(err => console.error('Error loading CSV:', err));
+
+  </script>
 </body>
 </html>
