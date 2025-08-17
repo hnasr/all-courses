@@ -7,3 +7,4 @@
 5180026, custom_price, PF-AUG2025-L, min
 5666148, custom_price, OS-AUG2025-L, min
 6244687, custom_price, ND-AUG2025-L, min
+6752077, custom_price, REALTIME, min
