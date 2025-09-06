@@ -1,10 +1,10 @@
 "course_id","coupon_type","coupon_code"
-4953660, best_price, BACK-SEP2025-A
-4574556, best_price, NET-SEP2025-A
-2773328, best_price, NGINX-SEP2025-A
-2722880, best_price, DB-SEP2025-A
-2034070, best_price, PY-SEP2025-A
-5180026, best_price, PF-SEP2025-A
-5666148, best_price, OS-SEP2025-A
-6244687, best_price, ND-SEP2025-A
-6752077, best_price, WS-SEP2025-A
+4953660, best_price, BACK-SEP2025-B
+4574556, best_price, NET-SEP2025-B
+2773328, best_price, NGINX-SEP2025-B
+2722880, best_price, DB-SEP2025-B
+2034070, best_price, PY-SEP2025-B
+5180026, best_price, PF-SEP2025-B
+5666148, best_price, OS-SEP2025-B
+6244687, best_price, ND-SEP2025-B
+6752077, best_price, WS-SEP2025-B
