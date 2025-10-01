@@ -1,10 +1,10 @@
 "course_id","coupon_type","coupon_code","custom_price"
-4953660, custom_price, BACK-SEP2025-L, min
-4574556, custom_price, NET-SEP2025-L, min
+4953660, custom_price, BK-FALL25, min
+4574556, custom_price, NT-FALL25, min
 2773328, custom_price, NGINX-SEP2025-L, min
 2722880, custom_price, DB-SEP2025-L, min
 2034070, custom_price, PY-SEP2025-L, min
 5180026, custom_price, PF-SEP2025-L, min
-5666148, custom_price, OS-SEP2025-L, min
+5666148, custom_price, OS-FALL25, min
 6244687, custom_price, ND-SEP2025-L, min
 6752077, custom_price, WS-SEP2025-L, min
