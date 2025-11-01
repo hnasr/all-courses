@@ -505,7 +505,9 @@ document.querySelectorAll('details.bundle-intro').forEach(d => {
     ));
 
     json.forEach(c => {
-      document.getElementById(c.course_id).innerHTML = c.coupon_code
+      const e = document.getElementById(c.course_id);
+      if (e)
+        e.innerHTML = c.coupon_code
     })
     //console.log(json);
   })
