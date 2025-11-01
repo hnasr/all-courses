@@ -405,7 +405,7 @@ details.bundle-intro[open] summary::after {
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-         <span class ='coupon-text-sub' id = '4953660'>BACK-COUP-L</span>
+         <span class ='coupon-text-sub' id = 'b4953660'>BACK-COUP-L</span>
 
         </form>
 
@@ -505,9 +505,14 @@ document.querySelectorAll('details.bundle-intro').forEach(d => {
     ));
 
     json.forEach(c => {
-      const e = document.getElementById(c.course_id);
-      if (e)
-        e.innerHTML = c.coupon_code
+
+      let e1 = document.getElementById(c.course_id);
+      
+      let e2 = document.getElementById("b"+ c.course_id);
+      if (e1)
+        e1.innerHTML = c.coupon_code
+      if (e2)
+        e2.innerHTML = c.coupon_code
     })
     //console.log(json);
   })
