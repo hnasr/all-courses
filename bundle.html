@@ -3,8 +3,37 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>All Hussein Nasser Courses List with Coupons</title>
+  <title>Backend Engineering Bundles</title>
   <style>
+    
+    .topbar {
+  position: fixed;           /* stays visible when scrolling */
+  top: 1rem;
+  right: 1.5rem;
+  display: flex;
+  gap: 1rem;                 /* space between links */
+  z-index: 1000;
+}
+
+.topbar a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #2d2f31;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.topbar a:hover {
+  background-color: #A435F0;
+  color: #fff;
+}
+
+
+ 
     body {
       margin-top: 4rem;
       font-family: Arial, sans-serif;
@@ -13,18 +42,30 @@
       display: flex;
       justify-content: center;
     }
+
+    .bundles-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two side-by-side columns */
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .bundles-container {
+    grid-template-columns: 1fr; /* stack vertically on small screens */
+  }
+}
+
+
     .courses-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
-      max-width: 900px;
+      max-width: 500px;
       width: 100%;
     }
-    @media (min-width: 600px) {
-      .courses-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
+   
     .course {
       background: white;
       border: 1px solid #ccc;
@@ -131,78 +172,95 @@
       color:#6a6f73;
       margin-top: 1px;
     }
-
-h1 {
+ h1 {
+  margin-top: 4rem;
   text-align: center;
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 }
 
 
-    .topbar {
-  position: fixed;           /* stays visible when scrolling */
-  top: 1rem;
-  right: 1.5rem;
-  display: flex;
-  gap: 1rem;                 /* space between links */
-  z-index: 1000;
+/* Collapsible intro under each bundle title */
+details.bundle-intro {
+  background: #fff;
+  border: 1px solid #d1d7dc;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin: -0.25rem 0 0.75rem; /* tucks under the H1 nicely */
 }
 
-.topbar a {
-  text-decoration: none;
+details.bundle-intro summary {
+  cursor: pointer;
   font-weight: 600;
   color: #2d2f31;
-  background: #fff;
-  border: 1px solid #ccc;
-  padding: 6px 12px;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  transition: background-color 0.2s ease, color 0.2s ease;
+  list-style: none;       /* hide default marker in some browsers */
 }
 
-.topbar a:hover {
-  background-color: #A435F0;
-  color: #fff;
+details.bundle-intro summary::marker { display: none; } /* Safari */
+details.bundle-intro summary::-webkit-details-marker { display: none; } /* Chrome */
+
+details.bundle-intro summary::after {
+  content: "▸";
+  float: right;
+  transition: transform 0.2s ease;
 }
+
+details.bundle-intro[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.bundle-intro .intro-body {
+  margin-top: 0.5rem;
+  color: #4a4f54;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+.bundle-header {               /* new */
+  display: block;
+  margin-bottom: 1rem;         /* spacing before the first course card */
+}
+.bundle-header h1 {
+  margin: 0 0 .5rem 0;         /* tight spacing between title and collapsible */
+}
+
 
   </style>
 </head>
 <body>
+
    <div class="topbar">
   <a href="/">🏠 Home</a>
   <a href="/bundle.html">🎓 Bundles</a>
 </div>
-    
-  <div class="courses-grid">
-     <div class="course" id="database">
-      <a href="https://databases.win" target="_blank">
-        <img src="db.png" alt="Fundamentals of Database Engineering">
-        <br><a href="https://databases.win" target="_blank">Fundamentals of Database Engineering</a>
-      </a>
-      <div class="rating-box">
-        <div class="rating">
-          <div class="rating-score">4.7</div>
-          <div class="stars">★★★★★</div>
-          <a href="#">9,978 ratings</a>
-        </div>
-        <div class="learners">
-          <div class="count">99,989</div>
-          <div class="label">learners</div>
-        </div>
-        <div>
-          <form action="https://databases.win">
-          <button type="submit" class="buy-button">
-            Buy on Udemy
-            <span class="coupon-text">with Coupon</span>
 
-          </button>
-          <span class ='coupon-text-sub' id = '2722880'>DB-COUP-L</span>
 
-        </form>
-        </div>
-      </div>
+  <div class="bundles-container">
+ 
+    <div class="courses-grid">
+
+  <div class="bundle-header">
+   
+  <h1>Intermediate Backend Engineering Bundle</h1>
+  <br>
+  <details class="bundle-intro">
+    <summary data-closed="Expand to learn more" data-open="Hide details"></summary>
+    <div class="intro-body">
+     <p> If you new to backend engineering, built crud apps and want to take your skill to the next level consider grabbing the Intermediate Backend engineering Bundle. It consists of three fundamental courses in this order for an effective learning roadmap.</p>
+
+<ol><li>Fundamentals of Operating Systems</li>
+<li>Fundamentals of Network Engineering</li>
+<li>Fundamentals of Backend Engineering </li>
+</ol>
+ <p> The OS course polishes your knowledge about how the application work with the kernel, socket programming and file systems.</p> 
+
+<p> The network course introduces the bridge to the backend, how the application and the kernel sockets work the network.</p> 
+
+<p> Finally the backend course introduces you to the common backend design patterns how it interacts with both the OS and network to receive requests, process and write responses.</p> 
 
     </div>
+  </details>
+</div>
+
 
     <div class="course" id="os">
       <a href="https://oscourse.win" target="_blank">
@@ -289,41 +347,75 @@ h1 {
         </div>
 
       </div>
-
-      <p><small>Recommended Prerequisites: <a href="#network">Fundamentals of Network Engineering</a> + <a href="#os">Fundamentals of Operating Systems</a></small>
-      </p>
+ 
 
     </div>
 
-    <div class="course" id="realtime">
-      <a href="https://realtime.husseinnasser.com" target="_blank">
-        <img src="realtime.png" alt="Scalable Realtime Backend Applications">
-        <br><a href="https://realtime.husseinnasser.com" target="_blank">Scalable Realtime Backend Applications</a>
+  
+  </div>
+ 
+
+   <div class="courses-grid">
+ <div class="bundle-header">
+  
+  <h1>Advanced Backend Engineering Bundle</h1>
+  <br>
+  <details class="bundle-intro">
+    <summary data-closed="Expand to learn more" data-open="Hide details"></summary>
+    <div class="intro-body">
+         <p>  If have 3-5 years of experience in the backend and want to elevate your skills, consider grabbing the advanced Backend engineering Bundle. It consists of three fundamental courses taken in this order for an effective learning roadmap.</p>
+
+<ol><li>Fundamentals of Backend Engineering</li>
+<li>Troubleshooting Backend Systems</li>
+<li>Real-Time Backend Systems with WebSockets </li>
+</ol>
+ <p> The backend course introduces you to the common backend design patterns and how it interacts with both the OS and network to receive requests, process and write responses. 
+</p> 
+
+<p> In the Backend Troubleshooting course (and also my favorite) you get to find issues with slow performance, unexpected bugs, and identify exactly where the trouble with performance toolings.</p> 
+
+<p> And finally the real-time backend systems, my newest course, building backend applications is interesting, building a realtime one is twice is challenging and interesting.</p> 
+<p>
+  Please note that the Fundamentals of Backend Engineering is an intermediate course that requires some prerequisites such as networking and operating systems fundamentals which is available in the intermediate backend engineering bundle. 
+</p>
+    </div>
+  </details>
+</div>
+
+
+    <div class="course" id="backend">
+      <a href="https://backend.win" target="_blank">
+        <img src="back.png" alt="Fundamentals of Backend Engineering">
+        <br> <a href="https://backend.win" target="_blank">Fundamentals of Backend Engineering</a>
       </a>
       <div class="rating-box">
         <div class="rating">
-          <div class="rating-score">4.9</div>
+          <div class="rating-score">4.7</div>
           <div class="stars">★★★★★</div>
-          <a href="#">563 ratings</a>
+          <a>5,447 ratings</a>
         </div>
         <div class="learners">
-          <div class="count">1,500</div>
+          <div class="count">44,664</div>
           <div class="label">learners</div>
         </div>
+        
         <div>
-          <form action="https://realtime.husseinnasser.com">
+          <form action="https://backend.win">
           <button type="submit" class="buy-button">
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-             <span class ='coupon-text-sub' id = '6752077'>WS-COUP-L</span>
+         <span class ='coupon-text-sub' id = 'b4953660'>BACK-COUP-L</span>
 
         </form>
+
         </div>
+
       </div>
-      <p><small>Recommended Prerequisites: <a href="#backend">Backend Engineering</a></small></p>
+ 
 
     </div>
+
 
     <div class="course" id="troubleshooting">
       <a href="https://performance.husseinnasser.com" target="_blank">
@@ -351,102 +443,57 @@ h1 {
         </form>
         </div>
       </div>
-      <p><small>Recommended Prerequisites: <a href="#backend">Backend Engineering</a></small></p>
-
+ 
     </div>
-
-    <div class="course" id="nginx">
-      <a href="https://nginx.husseinnasser.com" target="_blank">
-        <img src="nginx.png" alt="Introduction to NGINX">
-        <br><a href="https://nginx.husseinnasser.com" target="_blank">Introduction to NGINX</a>
+ 
+    
+    <div class="course" id="realtime">
+      <a href="https://realtime.husseinnasser.com" target="_blank">
+        <img src="realtime.png" alt="Scalable Realtime Backend Applications">
+        <br><a href="https://realtime.husseinnasser.com" target="_blank">Scalable Realtime Backend Applications</a>
       </a>
       <div class="rating-box">
         <div class="rating">
-          <div class="rating-score">4.7</div>
+          <div class="rating-score">4.9</div>
           <div class="stars">★★★★★</div>
-          <a href="#">1,905 ratings</a>
+          <a href="#">563 ratings</a>
         </div>
         <div class="learners">
-          <div class="count">24,266</div>
+          <div class="count">1,500</div>
           <div class="label">learners</div>
         </div>
         <div>
-          <form action="https://nginx.husseinnasser.com">
+          <form action="https://realtime.husseinnasser.com">
           <button type="submit" class="buy-button">
             Buy on Udemy
             <span class="coupon-text">with Coupon</span>
           </button>
-         <span class ='coupon-text-sub' id = '2773328'>NGINX-COUP-L</span>
-
-
-        </form>
-        </div>
-      </div>
-      <p><small>Recommended Prerequisites: <a href="#backend">Backend Engineering</a></small></p>
-
-    </div>
-
-    <div class="course" id="node">
-      <a href="https://node.win" target="_blank">
-        <img src="node.png" alt="NodeJS Internals and Architecture">
-        <br> <a href="https://node.win" target="_blank">NodeJS Internals and Architecture</a>
-      </a>
-      <div class="rating-box">
-        <div class="rating">
-          <div class="rating-score">4.8</div>
-          <div class="stars">★★★★★</div>
-          <a href="#">157 ratings</a>
-        </div>
-        <div class="learners">
-          <div class="count">2,476</div>
-          <div class="label">learners</div>
-        </div>
-        <div>
-          <form action="https://node.win">
-          <button type="submit" class="buy-button">
-            Buy on Udemy
-            <span class="coupon-text">with Coupon</span>
-          </button>
-          <span class ='coupon-text-sub' id = '6244687'>ND-COUP-L</span>
-
+             <span class ='coupon-text-sub' id = '6752077'>WS-COUP-L</span>
 
         </form>
         </div>
       </div>
-      <p><small>Recommended Prerequisites: <a href="#os">Operating Systems</a></small></p>
-
+ 
     </div>
 
-    <div class="course" id="python">
-      <a href="https://python.husseinnasser.com" target="_blank">
-        <img src="py.png" alt="Python on the Backend">
-        <br> <a href="https://python.husseinnasser.com" target="_blank">Python on the Backend</a>
-      </a>
-      <div class="rating-box">
-        <div class="rating">
-          <div class="rating-score">4.7</div>
-          <div class="stars">★★★★★</div>
-          <a href="#">1,080 ratings </a>
-        </div>
-        <div class="learners">
-          <div class="count">31,712</div>
-          <div class="label">learners</div>
-        </div>
-        <div>
-          <form action="https://python.husseinnasser.com">
-          <button type="submit" class="buy-button">
-            Buy on Udemy
-            <span class="coupon-text">with Coupon</span>
-          </button>
-          <span class ='coupon-text-sub' id = '2034070'>PY-COUP-L</span>
+</div>
 
-        </form>
-        </div>
-      </div>
-    </div>
+  
   </div>
 
+ 
+</div>
   <script>
+
+document.querySelectorAll('details.bundle-intro').forEach(d => {
+    const summary = d.querySelector('summary');
+    const closed = summary.dataset.closed || 'Expand to learn more';
+    const open = summary.dataset.open || 'Hide details';
+    summary.textContent = closed;
+    d.addEventListener('toggle', () => {
+      summary.textContent = d.open ? open : closed;
+    });
+  });
 
   fetch('/coupons.txt')
   .then(res => res.text())
@@ -458,12 +505,20 @@ h1 {
     ));
 
     json.forEach(c => {
-      document.getElementById(c.course_id).innerHTML = c.coupon_code
+
+      let e1 = document.getElementById(c.course_id);
+      
+      let e2 = document.getElementById("b"+ c.course_id);
+      if (e1)
+        e1.innerHTML = c.coupon_code
+      if (e2)
+        e2.innerHTML = c.coupon_code
     })
     //console.log(json);
   })
   .catch(err => console.error('Error loading CSV:', err));
 
   </script>
+
 </body>
 </html>
