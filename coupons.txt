@@ -1,9 +1,9 @@
-"course_id","coupon_type","coupon_code"
-4953660, best_price, BACK-AUG2025-B
-4574556, best_price, NET-AUG2025-B
-2773328, best_price, NGINX-AUG2025-B
-2722880, best_price, DB-AUG2025-B
-2034070, best_price, PY-AUG2025-B
-5180026, best_price, PF-AUG2025-B
-5666148, best_price, OS-AUG2025-B
-6244687, best_price, ND-AUG2025-B
+"course_id","coupon_type","coupon_code","custom_price"
+4953660, custom_price, BACK-DEC2025-L, min
+4574556, custom_price, NET-DEC2025-L, min
+2773328, custom_price, NGINX-DEC2025-L, min
+2722880, custom_price, DB-DEC2025-L, min
+2034070, custom_price, PY-DEC2025-L, min
+5180026, custom_price, PF-DEC2025-L, min
+5666148, custom_price, OS-DEC2025-L, min
+6244687, custom_price, ND-DEC2025-L, min
